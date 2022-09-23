@@ -201,7 +201,9 @@
         "justifyMode": "auto",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
@@ -261,7 +263,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 185
+                "value": 246
               }
             ]
           },
@@ -280,7 +282,7 @@
         ]
       },
       "gridPos": {
-        "h": 23,
+        "h": 22,
         "w": 5,
         "x": 19,
         "y": 0
@@ -289,7 +291,9 @@
       "options": {
         "footer": {
           "fields": "",
-          "reducer": ["sum"],
+          "reducer": [
+            "sum"
+          ],
           "show": false
         },
         "showHeader": true,
@@ -308,11 +312,11 @@
             "uid": "7addBDn4k"
           },
           "format": 1,
-          "rawSQL": "SELECT resource_type, COUNT(DISTINCT id) as Findings\nFROM sh_findings WHERE awsaccountid='899456967600'\nGROUP BY resource_type ORDER BY Findings DESC;",
+          "rawSQL": "SELECT resource_type AS Resource_Type, COUNT(DISTINCT id) AS Findings\nFROM sh_findings WHERE awsaccountid='899456967600' AND compliance_status!='PASSED'\nGROUP BY resource_type ORDER BY Findings DESC;",
           "refId": "A"
         }
       ],
-      "title": "Findings by Resource",
+      "title": "Open Findings by Resource Type",
       "type": "table"
     },
     {
@@ -351,7 +355,9 @@
         "justifyMode": "auto",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
@@ -413,7 +419,9 @@
         "justifyMode": "auto",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
@@ -475,7 +483,9 @@
         "justifyMode": "auto",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
@@ -602,7 +612,9 @@
       },
       "id": 24,
       "options": {
-        "displayLabels": ["percent"],
+        "displayLabels": [
+          "percent"
+        ],
         "legend": {
           "displayMode": "list",
           "placement": "right",
@@ -610,7 +622,9 @@
         },
         "pieType": "pie",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
@@ -675,7 +689,9 @@
         "justifyMode": "auto",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
@@ -737,7 +753,9 @@
         "justifyMode": "auto",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
@@ -799,7 +817,9 @@
         "justifyMode": "auto",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
@@ -958,7 +978,7 @@
         ]
       },
       "gridPos": {
-        "h": 7,
+        "h": 8,
         "w": 9,
         "x": 0,
         "y": 7
@@ -1080,7 +1100,7 @@
         ]
       },
       "gridPos": {
-        "h": 7,
+        "h": 8,
         "w": 10,
         "x": 9,
         "y": 7
@@ -1089,7 +1109,9 @@
       "options": {
         "footer": {
           "fields": "",
-          "reducer": ["sum"],
+          "reducer": [
+            "sum"
+          ],
           "show": false
         },
         "showHeader": true,
@@ -1180,16 +1202,18 @@
         ]
       },
       "gridPos": {
-        "h": 10,
+        "h": 7,
         "w": 9,
         "x": 0,
-        "y": 14
+        "y": 15
       },
       "id": 21,
       "options": {
         "footer": {
           "fields": "",
-          "reducer": ["sum"],
+          "reducer": [
+            "sum"
+          ],
           "show": false
         },
         "showHeader": true,
@@ -1208,11 +1232,11 @@
             "uid": "7addBDn4k"
           },
           "format": 1,
-          "rawSQL": "SELECT title as Title, COUNT(DISTINCT id) as Findings\nFROM sh_findings WHERE awsaccountid='899456967600'\nGROUP BY title ORDER BY Findings DESC;",
+          "rawSQL": "SELECT title as Title, COUNT(DISTINCT id) as Findings\nFROM sh_findings WHERE awsaccountid='899456967600' AND compliance_status!='PASSED'\nGROUP BY title ORDER BY Findings DESC;",
           "refId": "A"
         }
       ],
-      "title": "Findings by Title",
+      "title": "Open Findings by Title",
       "type": "table"
     },
     {
@@ -1280,16 +1304,18 @@
         ]
       },
       "gridPos": {
-        "h": 6,
+        "h": 7,
         "w": 10,
         "x": 9,
-        "y": 14
+        "y": 15
       },
       "id": 23,
       "options": {
         "footer": {
           "fields": "",
-          "reducer": ["sum"],
+          "reducer": [
+            "sum"
+          ],
           "show": false
         },
         "showHeader": true,
@@ -1318,7 +1344,9 @@
   ],
   "schemaVersion": 35,
   "style": "dark",
-  "tags": ["Labs Account Dashboard"],
+  "tags": [
+    "Labs Account Dashboard"
+  ],
   "templating": {
     "list": []
   },
@@ -1328,8 +1356,8 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Security Single Pane of Glass - Labs Account",
+  "title": "Security Hawk - Labs Account",
   "uid": "AS7Z_1n4k",
-  "version": 5,
+  "version": 8,
   "weekStart": ""
 }

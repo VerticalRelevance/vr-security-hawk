@@ -298,11 +298,11 @@
             "uid": "7addBDn4k"
           },
           "format": 1,
-          "rawSQL": "SELECT resource_type, COUNT(DISTINCT id) as Findings\nFROM sh_findings WHERE awsaccountid='909698979753'\nGROUP BY resource_type ORDER BY Findings DESC;",
+          "rawSQL": "SELECT resource_type, COUNT(DISTINCT id) as Findings\nFROM sh_findings WHERE awsaccountid='909698979753' AND compliance_status!='PASSED'\nGROUP BY resource_type ORDER BY Findings DESC;",
           "refId": "A"
         }
       ],
-      "title": "Findings by Resource",
+      "title": "Open Findings by Resource",
       "type": "table"
     },
     {
@@ -948,7 +948,7 @@
         ]
       },
       "gridPos": {
-        "h": 7,
+        "h": 8,
         "w": 9,
         "x": 0,
         "y": 7
@@ -1070,7 +1070,7 @@
         ]
       },
       "gridPos": {
-        "h": 7,
+        "h": 8,
         "w": 10,
         "x": 9,
         "y": 7
@@ -1170,10 +1170,10 @@
         ]
       },
       "gridPos": {
-        "h": 10,
+        "h": 8,
         "w": 9,
         "x": 0,
-        "y": 14
+        "y": 15
       },
       "id": 21,
       "options": {
@@ -1198,11 +1198,11 @@
             "uid": "7addBDn4k"
           },
           "format": 1,
-          "rawSQL": "SELECT title as Title, COUNT(DISTINCT id) as Findings\nFROM sh_findings WHERE awsaccountid='909698979753'\nGROUP BY title ORDER BY Findings DESC;",
+          "rawSQL": "SELECT title as Title, COUNT(DISTINCT id) as Findings\nFROM sh_findings WHERE awsaccountid='909698979753' AND compliance_status!='PASSED'\nGROUP BY title ORDER BY Findings DESC;",
           "refId": "A"
         }
       ],
-      "title": "Findings by Title",
+      "title": "Open Findings by Title",
       "type": "table"
     },
     {
@@ -1270,10 +1270,10 @@
         ]
       },
       "gridPos": {
-        "h": 6,
+        "h": 8,
         "w": 10,
         "x": 9,
-        "y": 14
+        "y": 15
       },
       "id": 23,
       "options": {
@@ -1318,8 +1318,8 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Security Single Pane of Glass - Associate Accelerator Account",
+  "title": "Security Hawk - Associate Accelerator Account",
   "uid": "iA0JlJ74z",
-  "version": 5,
+  "version": 9,
   "weekStart": ""
 }

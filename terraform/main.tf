@@ -1,6 +1,12 @@
 provider "aws" {
   region = "us-west-2"
   profile = "Admin" #TODO: Remove this
+  default_tags {
+    tags = {
+      app_name = "security_hawk"
+      dept        = "awslabs"
+    }
+  }
 }
 
 resource "aws_cloudwatch_event_rule" "sspg_sh_findings_rule" {

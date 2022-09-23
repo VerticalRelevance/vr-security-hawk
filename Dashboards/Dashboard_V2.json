@@ -70,7 +70,7 @@
       },
       "gridPos": {
         "h": 7,
-        "w": 5,
+        "w": 6,
         "x": 0,
         "y": 0
       },
@@ -143,7 +143,7 @@
       "gridPos": {
         "h": 1,
         "w": 11,
-        "x": 5,
+        "x": 6,
         "y": 0
       },
       "id": 28,
@@ -181,7 +181,7 @@
       "gridPos": {
         "h": 3,
         "w": 3,
-        "x": 16,
+        "x": 17,
         "y": 0
       },
       "id": 2,
@@ -271,8 +271,8 @@
       },
       "gridPos": {
         "h": 23,
-        "w": 5,
-        "x": 19,
+        "w": 4,
+        "x": 20,
         "y": 0
       },
       "id": 4,
@@ -298,11 +298,11 @@
             "uid": "7addBDn4k"
           },
           "format": 1,
-          "rawSQL": "SELECT resource_type, COUNT(DISTINCT id) as Findings\nFROM sh_findings\nGROUP BY resource_type ORDER BY Findings DESC;",
+          "rawSQL": "SELECT resource_type, COUNT(DISTINCT id) as Findings\nFROM sh_findings  WHERE compliance_status!='PASSED' \nGROUP BY resource_type ORDER BY Findings DESC;",
           "refId": "A"
         }
       ],
-      "title": "Findings by Resource",
+      "title": "Open Findings by Resource",
       "type": "table"
     },
     {
@@ -331,7 +331,7 @@
       "gridPos": {
         "h": 6,
         "w": 2,
-        "x": 5,
+        "x": 6,
         "y": 1
       },
       "id": 8,
@@ -393,7 +393,7 @@
       "gridPos": {
         "h": 3,
         "w": 2,
-        "x": 7,
+        "x": 8,
         "y": 1
       },
       "id": 10,
@@ -455,7 +455,7 @@
       "gridPos": {
         "h": 3,
         "w": 2,
-        "x": 9,
+        "x": 10,
         "y": 1
       },
       "id": 14,
@@ -587,7 +587,7 @@
       "gridPos": {
         "h": 6,
         "w": 5,
-        "x": 11,
+        "x": 12,
         "y": 1
       },
       "id": 24,
@@ -655,7 +655,7 @@
       "gridPos": {
         "h": 4,
         "w": 3,
-        "x": 16,
+        "x": 17,
         "y": 3
       },
       "id": 17,
@@ -717,7 +717,7 @@
       "gridPos": {
         "h": 3,
         "w": 2,
-        "x": 7,
+        "x": 8,
         "y": 4
       },
       "id": 12,
@@ -779,7 +779,7 @@
       "gridPos": {
         "h": 3,
         "w": 2,
-        "x": 9,
+        "x": 10,
         "y": 4
       },
       "id": 19,
@@ -949,7 +949,7 @@
       },
       "gridPos": {
         "h": 7,
-        "w": 9,
+        "w": 10,
         "x": 0,
         "y": 7
       },
@@ -1137,7 +1137,7 @@
       "gridPos": {
         "h": 7,
         "w": 10,
-        "x": 9,
+        "x": 10,
         "y": 7
       },
       "id": 6,
@@ -1252,15 +1252,15 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 580
+                "value": 647
               }
             ]
           }
         ]
       },
       "gridPos": {
-        "h": 10,
-        "w": 9,
+        "h": 9,
+        "w": 10,
         "x": 0,
         "y": 14
       },
@@ -1287,11 +1287,11 @@
             "uid": "7addBDn4k"
           },
           "format": 1,
-          "rawSQL": "SELECT title as Title, COUNT(DISTINCT id) as Findings\nFROM sh_findings\nGROUP BY title ORDER BY Findings DESC;",
+          "rawSQL": "SELECT title as Title, COUNT(DISTINCT id) as Findings\nFROM sh_findings  WHERE compliance_status!='PASSED'\nGROUP BY title ORDER BY Findings DESC;",
           "refId": "A"
         }
       ],
-      "title": "Findings by Title",
+      "title": "Open Findings by Title",
       "type": "table"
     },
     {
@@ -1361,7 +1361,7 @@
       "gridPos": {
         "h": 5,
         "w": 10,
-        "x": 9,
+        "x": 10,
         "y": 14
       },
       "id": 22,
@@ -1459,9 +1459,9 @@
         ]
       },
       "gridPos": {
-        "h": 5,
+        "h": 4,
         "w": 10,
-        "x": 9,
+        "x": 10,
         "y": 19
       },
       "id": 23,
@@ -1507,8 +1507,8 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Security Single Pane of Glass",
+  "title": "Security Hawk - Single Pane of Glass",
   "uid": "sjOpLvn4z",
-  "version": 18,
+  "version": 23,
   "weekStart": ""
 }
