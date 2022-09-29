@@ -4,7 +4,7 @@ provider "aws" {
   default_tags {
     tags = {
       app_name = "security_hawk"
-      dept        = "awslabs"
+      dept     = "awslabs"
     }
   }
 }

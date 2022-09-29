@@ -1,5 +1,5 @@
 resource "random_string" "s3_id" {
-  length           = 4
+  length           = 6
   special          = false
   lower            = true
   upper            = false
