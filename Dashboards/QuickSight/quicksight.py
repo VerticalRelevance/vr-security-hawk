@@ -1,9 +1,6 @@
 import boto3
-import json
-import pprint
 
 client = boto3.client('quicksight')
-
 
 response = client.create_dashboard(
    AwsAccountId='', 
